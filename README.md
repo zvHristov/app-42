@@ -17,15 +17,16 @@ Project is created with:
 To run this project, install it locally using npm:
 1. Start the server first by running npm install,followed by npm start inside server's directory.
 2. It will print the URL that should be added 
-````
+```
 $ npm install
 $ cd express-app
 $ npm install
 $ cd ../
 $ npm start
+```
 ## Code Examples
 It should open the : `http://localhost:3000/` on your browser.
 If it didn't open, then manually open `http://localhost:3000/`
 
 ## Sources
-This app is inspired by pre-interview task assignment” by [@Tick42's](https://github.com/zvHristov/)
+This app is inspired by pre-interview task assignment by [@Tick42's](https://github.com/zvHristov/)
