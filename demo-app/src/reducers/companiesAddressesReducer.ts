@@ -30,6 +30,5 @@ function onGetCompanyAddressesInProgress(currentState: ICompanyAddressesStoreSta
     return {
         ...currentState,
         isFetching: true,
-
     }
 }

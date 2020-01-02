@@ -1,4 +1,3 @@
-import ICompanyViewModel from "../models/ICompanyViewModel";
 import ICompany from "../models/ICompany";
 import ICompanyAddresses from "../models/ICompanyAddresses";
 import IProject from "../models/IProject";

@@ -430,7 +430,6 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
         const newState = [...this.state.projects];
         newState[index] = newProject;
         this.setState({projects: newState});
-
     };
     private readonly newEmployee = (event: any, index: number): void => {
         const company = [...this.props.companies];
@@ -490,7 +489,6 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
         const newState = [...this.state.employees];
         newState[index] = isNewEmployee;
         this.setState({employees: newState});
-
     };
     private async saveEmployee(employee: IEmployee){
         await this.props.updatedEmployee(employee);
@@ -503,7 +501,6 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
                 if (this.state.selectedEmployeeToProject.length){
                     await this.props.updatedEmployees(this.state.selectedEmployeeToProject);
                 }
-
             } else {
                 await this.props.addEmployee(this.state.newEmployee);
             }
@@ -542,7 +539,6 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
             selectedEmployeeToProject: selectedEmployeeToProject
         })
     }
-
 }
 function mapStateToProps(
     state: IStoreState
