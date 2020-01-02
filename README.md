@@ -10,12 +10,12 @@ Just Simple App
 ## Technologies
 Project is created with:
 * React client version
-* Node Js Setup (Express Framework) 
-	
+* Node Js Setup (Express Framework)
+
 ## Setup
 To run this project, install it locally using npm:
 1. Start the server first by running npm install, followed by npm start inside server's directory.
-2. It will print the URL that should be added 
+2. It will print the URL that should be added
 ```
 $ npm install
 $ cd express-app
@@ -23,7 +23,7 @@ $ npm install
 $ cd ../
 $ cd ../demo-app
 $ npm install
-cd ../
+$ cd ../
 $ npm start
 ```
 ## Code Examples
