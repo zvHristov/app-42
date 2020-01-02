@@ -238,7 +238,7 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
                     <Modal.Content>
                         <h3 className='font-bold text-xl mb-2'>Add new Employee</h3>
                         <form className='flex-wrap flex'>
-                            <p className='w-1/2'>
+                            <p className='w-1/2 pr-1'>
                                 First Name: <input type='text' name='firstName' value={this.state.newEmployee.firstName}
                                                    className={`${!this.state.newEmployee.firstName
                                 ? 'border-red-200 ' : null } leading-tight shadow appearance-none border rounded
@@ -258,7 +258,7 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
 
                                                    />
                             </p>
-                            <p className='w-1/2'>
+                            <p className='w-1/2 pr-1'>
                                 Date Of Birth: <input type='date' name='dateOfBirth'
                                                       className={`${!this.state.newEmployee.dateOfBirth
                                 ? 'border-red-200 ' : null } leading-tight shadow appearance-none border rounded
@@ -274,7 +274,7 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
                                                       this.newEmployee(event, keyCompany)}
                                                   value={this.state.newEmployee.jobTitle} />
                             </p>
-                            <p className='w-1/2'>
+                            <p className='w-1/2 pr-1'>
                                 Job Area: <input type='text' name='jobArea' className='shadow appearance-none border rounded
                                 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
                                                  onChange={(event) =>
