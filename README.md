@@ -23,7 +23,6 @@ $ cd express-app
 $ npm install
 $ cd ../
 $ npm start
-```
 ## Code Examples
 It should open the : `http://localhost:3000/` on your browser.
 If it didn't open, then manually open `http://localhost:3000/`
