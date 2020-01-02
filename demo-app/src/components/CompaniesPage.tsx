@@ -401,14 +401,14 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
         newSelected.splice(index, 1);
         this.setState({selectedEmployeeToProject: newSelected});
     };
-    private readonly removeEmployeeToProject = (employee: IEmployee, indexProject: number): void => {
+    private async removeEmployeeToProject(employee: IEmployee, indexProject: number) {
         const projects: Array<IProject> = [...this.props.projects];
         for (let i = 0; i < projects[indexProject].employeesId.length; i ++) {
             if (employee.id === projects[indexProject].employeesId[i]) {
                 projects[indexProject].employeesId.splice(i);
             }
         }
-        this.props.updatedProject(projects[indexProject]);
+        await this.props.updatedProject(projects[indexProject]);
     };
     private async saveProject(project: IProject) {
     await this.props.updatedProject(project);
