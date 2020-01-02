@@ -66,6 +66,7 @@ export function updatedProject(project: IProject): (dispatch: Dispatch<any>) => 
         try {
             axiosConfig.post(`updateProject/${project.id}`, project).then((response) => {
                 dispatch(updatedProjectSuccess(response.statusText));
+                dispatch(getProjects());
             });
         } catch (error) {
             dispatch(updatedProjectFail(error));

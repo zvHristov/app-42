@@ -66,6 +66,7 @@ export function updatedEmployee(employee: IEmployee): (dispatch: Dispatch<any>) 
         try {
             axiosConfig.post(`updateEmployee/${employee.id}`, employee).then((response) => {
                 dispatch(updatedEmployeeSuccess(response.statusText));
+                dispatch(getEmployees());
             });
         } catch (error) {
             dispatch(updatedEmployeeFail(error));
@@ -78,6 +79,7 @@ export function updatedEmployees(employees: Array<IEmployee>): (dispatch: Dispat
         try {
             axiosConfig.post(`updateEmployees`, employees).then((response) => {
                 dispatch(updatedEmployeeSuccess(response.statusText));
+                dispatch(getEmployees());
             });
         } catch (error) {
             dispatch(updatedEmployeeFail(error));

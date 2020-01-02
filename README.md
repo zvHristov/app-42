@@ -4,8 +4,7 @@
 * [Setup](#setup)
 
 ## General info
-I am a software engineer with working experience of 6 years in front-end and backend web-development.
-	Just Simple App
+Just Simple App
 	Setup React and Node JS in a project
 	read and write json file.
 ## Technologies
