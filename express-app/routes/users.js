@@ -117,9 +117,7 @@ router.post('/updateProject/:id', function(req, res, next) {
   const content = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'projects.json'), 'utf8'));
   for (let item in content) {
     if(req.params.id === content[item].id ){
-      content[item].name = req.body.name;
-      content[item].department = req.body.department;
-      content[item].employeesId = req.body.employeesId;
+      content[item] = req.body;
     }
   }
   //write file
