@@ -21,6 +21,9 @@ $ npm install
 $ cd express-app
 $ npm install
 $ cd ../
+$ cd ../demo-app
+$ npm install
+cd ../
 $ npm start
 ```
 ## Code Examples
