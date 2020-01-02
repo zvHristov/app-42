@@ -366,7 +366,6 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
         const newIndex = this.state.indexValueAccEmployee === index ? -1 : index;
         this.setState({indexValueAccEmployee: newIndex});
     };
-    // counter: number = 0;
     private readonly newProject = (event: any, index: number): void => {
         const companies = this.props.companies;
         const id = companies[index].id;
@@ -411,8 +410,8 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
         }
         this.props.updatedProject(projects[indexProject]);
     };
-    private readonly saveProject = (project: IProject): void => {
-        this.props.updatedProject(project);
+    private async saveProject(project: IProject) {
+    await this.props.updatedProject(project);
         this.resetStateModal();
     };
     private readonly editProject = (event: any, project: IProject, index: number): void => {
@@ -493,27 +492,27 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
         this.setState({employees: newState});
 
     };
-    private readonly saveEmployee = (employee: IEmployee): void => {
-        this.props.updatedEmployee(employee);
+    private async saveEmployee(employee: IEmployee){
+        await this.props.updatedEmployee(employee);
         this.resetStateModal();
     };
-    private readonly editItem = (companyId: string, handler: string, index: number, item: string): void => {
+    private async editItem(companyId: string, handler: string, index: number, item: string){
         if (handler === 'added') {
             if (item === 'project') {
-                this.props.addProject(this.state.newProject);
+                await this.props.addProject(this.state.newProject);
                 if (this.state.selectedEmployeeToProject.length){
-                    this.props.updatedEmployees(this.state.selectedEmployeeToProject);
+                    await this.props.updatedEmployees(this.state.selectedEmployeeToProject);
                 }
 
             } else {
-                this.props.addEmployee(this.state.newEmployee);
+                await this.props.addEmployee(this.state.newEmployee);
             }
             this.resetStateModal();
         }else {
             if (item === 'project') {
-                this.props.deletedProject(this.props.projects[index].id);
+                await this.props.deletedProject(this.props.projects[index].id);
             }else {
-                this.props.deletedEmployee(this.props.employees[index].id);
+                await this.props.deletedEmployee(this.props.employees[index].id);
             }
         }
     };
