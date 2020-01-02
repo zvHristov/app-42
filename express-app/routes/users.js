@@ -23,7 +23,6 @@ router.post('/employees', function(req, res, next) {
   res.status(200).end(content);
 });
 router.delete('/deleteEmployee/:id', function(req, res, next) {
-  console.log(req.body, 'addEmployee');
   const content = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'employees.json'), 'utf8'));
   for (let item in content) {
     if(req.params.id === content[item].id ){
@@ -39,7 +38,6 @@ router.delete('/deleteEmployee/:id', function(req, res, next) {
   res.status(200).end();
 });
 router.post('/addEmployee', function(req, res, next) {
-  console.log(req.body, 'addEmployee');
   const content = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'employees.json'), 'utf8'));
   content.push(req.body);
   //write file
@@ -51,7 +49,6 @@ router.post('/addEmployee', function(req, res, next) {
   res.status(200).end();
 });
 router.post('/updateEmployee/:id', function(req, res, next) {
-  console.log(req.body, 'updateEmployees');
   const content = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'employees.json'), 'utf8'));
   for (let item in content) {
     if(req.params.id === content[item].id ){
@@ -67,13 +64,11 @@ router.post('/updateEmployee/:id', function(req, res, next) {
   res.status(200).end();
 });
 router.post('/updateEmployees', function(req, res, next) {
-  console.log(req.body, 'updateEmployees');
   const content = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'employees.json'), 'utf8'));
   for (let item in content) {
     for (let itemNewEmployee in req.body) {
       if(content[item].id === req.body[itemNewEmployee].id ){
         content[item].companyId = req.body[itemNewEmployee].companyId;
-        console.log(content[item].companyId, 'new content')
       }
     }
   }
@@ -93,7 +88,6 @@ router.post('/projects', function(req, res, next) {
   res.status(200).end(content);
 });
 router.delete('/deleteProject/:id', function(req, res, next) {
-  console.log(req.params.id, 'req');
   const content = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'projects.json'), 'utf8'));
   for (let item in content) {
     if(req.params.id === content[item].id ){
@@ -109,7 +103,6 @@ router.delete('/deleteProject/:id', function(req, res, next) {
   res.status(200).end();
 });
 router.post('/addProject', function(req, res, next) {
-  console.log(req.body, 'req');
   const content = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'projects.json'), 'utf8'));
   content.push(req.body);
   //write file
@@ -121,7 +114,6 @@ router.post('/addProject', function(req, res, next) {
   res.status(200).end();
 });
 router.post('/updateProject/:id', function(req, res, next) {
-  console.log(req.body, 'req');
   const content = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'projects.json'), 'utf8'));
   for (let item in content) {
     if(req.params.id === content[item].id ){

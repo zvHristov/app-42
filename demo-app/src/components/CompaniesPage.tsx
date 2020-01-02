@@ -534,7 +534,7 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
                 companyId: '',
                 employeesId: [],
         },
-            // @ts-ignore
+            // eslint-disable-next-line
         selectedEmployeeToProject = new Array();
         this.setState({
             newProject: newProject,
