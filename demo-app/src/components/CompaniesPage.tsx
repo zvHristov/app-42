@@ -213,7 +213,6 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
                                 </article>
                             ))}
                         </form>
-                        <p>Company this is index Company:{keyCompany}</p>
                     </Modal.Content>
                     <Modal.Actions>
 
