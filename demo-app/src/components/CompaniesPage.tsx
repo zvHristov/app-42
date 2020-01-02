@@ -534,6 +534,7 @@ class CompaniesPage extends React.Component<ICompaniesPageProps, ICompaniesPageS
                 companyId: '',
                 employeesId: [],
         },
+            // @ts-ignore
         selectedEmployeeToProject = new Array();
         this.setState({
             newProject: newProject,

@@ -14,7 +14,7 @@ Project is created with:
 	
 ## Setup
 To run this project, install it locally using npm:
-1. Start the server first by running npm install,followed by npm start inside server's directory.
+1. Start the server first by running npm install, followed by npm start inside server's directory.
 2. It will print the URL that should be added 
 ```
 $ npm install
